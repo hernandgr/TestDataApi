@@ -14,12 +14,24 @@ namespace TestData.Api.Controllers
             new Employee { Id= 2, Name= "Sebastian", RoleId = 2, RoleName = "Contractor", AnnualSalary= 80000m}
         };
 
+        /// <summary>
+        /// Gets a list of employees with their data.
+        /// </summary>
+        /// <returns>The list of employees.</returns>
+        /// <response code="200">Returns the list of employees</response>
         [HttpGet]
         public IEnumerable<Employee> Get()
         {
             return employees;
         }
 
+        /// <summary>
+        /// Gets an employee with the given id.
+        /// </summary>
+        /// <param name="id">The identifier of the employee to search.</param>
+        /// <returns>The data of the employee with the given id.</returns>
+        /// <response code="200">The employee data.</response>
+        /// <response code="404">No employee data found for the given id.</response>
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {

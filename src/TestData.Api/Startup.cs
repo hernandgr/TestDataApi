@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.IO;
 
 namespace TestData.Api
 {
@@ -24,6 +26,9 @@ namespace TestData.Api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Employees Test API", Version = "v1" });
+
+                // Set the comments path for the Swagger JSON and UI.
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "TestData.Api.xml"));
             });
         }
 
