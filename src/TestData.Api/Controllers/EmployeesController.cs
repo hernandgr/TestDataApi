@@ -32,17 +32,17 @@ namespace TestData.Api.Controllers
         /// <returns>The data of the employee with the given id.</returns>
         /// <response code="200">The employee data.</response>
         /// <response code="404">No employee data found for the given id.</response>
-        [HttpGet("{id:int}")]
-        public IActionResult Get(int id)
-        {
-            var employee = employees.FirstOrDefault(x => x.Id == id);
+        //[HttpGet("{id:int}")]
+        //public IActionResult Get(int id)
+        //{
+        //    var employee = employees.FirstOrDefault(x => x.Id == id);
 
-            if (employee == null)
-            {
-                return NotFound();
-            }
+        //    if (employee == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(employee);
-        }
+        //    return Ok(employee);
+        //}
     }
 }
