@@ -10,8 +10,8 @@ namespace TestData.Api.Controllers
     {
         private readonly List<Employee> employees = new List<Employee>
         {
-            new Employee { Id= 1, Name= "Juan", ContractTypeName="HourlySalaryEmployee", RoleId = 1, RoleName = "Administrator", HourlySalary = 60000m, MonthlySalary = 80000m},
-            new Employee { Id= 2, Name= "Sebastian", ContractTypeName="MonthlySalaryEmployee", RoleId = 2, RoleName = "Contractor", HourlySalary = 60000m, MonthlySalary = 80000m}
+            new Employee { Id= 1, Name= "Andrea", ContractTypeName="HourlySalaryEmployee", RoleId = 1, RoleName = "Administrator", HourlySalary = 10000m, MonthlySalary = 50000m},
+            new Employee { Id= 2, Name= "Alex", ContractTypeName="MonthlySalaryEmployee", RoleId = 2, RoleName = "Contractor", HourlySalary = 10000m, MonthlySalary = 50000m}
         };
 
         /// <summary>
